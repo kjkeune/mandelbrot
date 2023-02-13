@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Mandelbrot Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu">
+        <p>Rendersize: <input type="number" value="1000" id="width"> x <input type="number" value="1000" id="height"> px</p>
+        <p>Centerpoint Re: <input type="number" value="0.0" id="reCenter"> Im: <input type="number" value="0.0" id="imCenter"></p>
+        <p>Zoom: <input type="number" value="1" id="zoom"></p>
+        <p>Iterations: <input type="number" value="250" id="maxIter"></p>
+        <p>Color Function: <select id="colorFunction">
+            <option value="rainbow">Rainbow</option>
+            <option value="greyscale">Greyscale</option>
+        </select></p>
+        <input type="button" value="Make Mandelbrot!" id="render">
+        <p>Re: <input id="re" disabled> Im: <input id="im" disabled> Iter: <input id="iter" disabled></p>
+        <p>Rendered in: <input id="time" disabled> s</p>
+    </div>
+    <div>
+        <canvas id="canvas" height="1" width="1"></canvas>
+    </div>
+    <script src="mandelbrot.js"></script>
+</body>
+
+</html>
